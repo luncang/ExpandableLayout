@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="expand relativelayout" />
+
+            <com.charles.expandablerelativelayout.ExpandableRelativeLayout
+                android:id="@+id/collapseView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:duration="350"
+                app:expandable="false">
+
+                <TextView
+                    android:id="@+id/numberTextView"
+                    android:layout_width="70px"
+                    android:layout_height="70px"
+                    android:background="@drawable/circle_textview"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#EBEFEC"
+                    android:textSize="35px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_toRightOf="@id/numberTextView"
+                    android:clickable="false"
+                    android:text="This is title"
+                    android:textColor="#1d953f"
+                    android:textSize="46px" />
+
+
+                <ImageView
+                    android:id="@+id/arrowImageView"
+                    android:layout_width="48px"
+                    android:layout_height="27px"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_an_xxh"
+                    android:clickable="false"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:id="@+id/ll_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/numberTextView"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="key" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="value" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="key" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="value" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="key" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="value" />
+                </LinearLayout>
+            </com.charles.expandablerelativelayout.ExpandableRelativeLayout>
+
+            <project.charles.com.flowlayout.ExpandableRelativeLayout
+                android:id="@+id/collapseView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <project.charles.com.flowlayout.ExpandableRelativeLayout
+                android:id="@+id/collapseView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
